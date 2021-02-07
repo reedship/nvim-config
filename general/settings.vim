@@ -1,19 +1,25 @@
 " Theme and Colors
+let g:AutoPairsUseInsertedCount = 1
+highlight MatchParen ctermfg=green ctermbg=white cterm=NONE
+"highlight Visual  guifg=#000000 guibg=#FFFFFF gui=none
+"colorscheme paramount
 set termguicolors
-set background=dark
+set background=light
 syntax on
 set t_Co=256
-let g:AutoPairsUseInsertedCount = 1
-highlight MatchParen ctermfg=black ctermbg=green cterm=NONE
 highlight LineNr ctermfg=darkgrey
-highlight Visual  guifg=#000000 guibg=#FFFFFF gui=none
-colorscheme gruvbox
+set number
+
+"Firewatch theme
+let g:two_firewatch_italics=1
+colo two-firewatch
+let g:airline_theme='twofirewatch' " if you have Airline installed and want the associated theme
 
 "Tabs
-set tabstop=4
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 
 " Functionality
@@ -48,9 +54,25 @@ set noshowmode
 set noshowcmd
 set shortmess+=F
 
+" JS / React
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+let g:closetag_filenames = '*.js,*.ts,*.html,*.xhtml,*.phtml'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_filetypes = 'js,ts,html,xhtml,phtml'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+let g:closetag_emptyTags_caseSensitive = 1
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ }
+let g:closetag_shortcut = '>'
+let g:closetag_close_shortcut = '<leader>>'
+
 " Airline
-let g:airline_theme='gruvbox'
-set ttimeoutlen=50
+"let g:airline_theme='one'
+let g:one_allow_italics = 1
+set ttimeoutlen=10
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#bufferline#enabled = 1

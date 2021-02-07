@@ -1,5 +1,5 @@
 nnoremap <C-F> :Files<CR>
-nnoremap <C-A> :Ag<CR>
+nnoremap <Leader>g :Ag<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <Leader>vs :source ~/.config/nvim/init.vim<CR>
 
