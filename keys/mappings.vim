@@ -1,4 +1,4 @@
-nnoremap <C-F> :Files<CR>
+nnoremap <C-F> :GFiles<CR>
 nnoremap <Leader>g :Ag<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <Leader>vs :source ~/.config/nvim/init.vim<CR>
@@ -31,10 +31,6 @@ nnoremap <C-c> <Esc>
 
 " Alternative saving
 nnoremap <C-s> :w<CR>
-
-" Easy caps on word hover
-inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<ESC>
 
 " Close-Buffers plugin
 nnoremap <C-B><C-o> :Bdelete other<CR>

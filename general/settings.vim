@@ -1,19 +1,19 @@
 " Theme and Colors
 let g:AutoPairsUseInsertedCount = 1
-highlight MatchParen ctermfg=green ctermbg=white cterm=NONE
+"highlight MatchParen ctermfg=green ctermbg=white cterm=NONE
 "highlight Visual  guifg=#000000 guibg=#FFFFFF gui=none
-"colorscheme paramount
+set background=dark
+colorscheme gruvbox
 set termguicolors
-set background=light
 syntax on
 set t_Co=256
-highlight LineNr ctermfg=darkgrey
+"highlight LineNr ctermfg=darkgrey
 set number
 
 "Firewatch theme
-let g:two_firewatch_italics=1
-colo two-firewatch
-let g:airline_theme='twofirewatch' " if you have Airline installed and want the associated theme
+"let g:two_firewatch_italics=1
+"colo two-firewatch
+"let g:airline_theme='twofirewatch' " if you have Airline installed and want the associated theme
 
 "Tabs
 set expandtab
@@ -76,3 +76,6 @@ set ttimeoutlen=10
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#bufferline#enabled = 1
+
+" NEOVIM RUBY HOST
+let g:ruby_host_prog = '/Users/braden/.gem/gems/neovim-0.8.1/exe/neovim-ruby-host'

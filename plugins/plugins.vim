@@ -1,39 +1,30 @@
 set nocompatible
 filetype off
+let g:ale_disable_lsp = 1
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-  Plugin 'chriskempson/tomorrow-theme'
-  Plugin 'rakr/vim-one'
   Plugin 'dense-analysis/ale'
-  Plugin 'vimwiki/vimwiki'
   Plugin 'VundleVim/Vundle.vim'
   Plugin 'rust-lang/rust.vim'
   Plugin 'pangloss/vim-javascript'
   Plugin 'leafgarland/typescript-vim'
   Plugin 'peitalin/vim-jsx-typescript'
   Plugin 'MaxMEllon/vim-jsx-pretty'
-  Plugin 'rakr/vim-two-firewatch'
   Plugin 'alvan/vim-closetag'
-  Plugin 'ayu-theme/ayu-vim'
   Plugin 'vim-airline/vim-airline'
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'tomtom/tcomment_vim'
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'tpope/vim-rails'
+  Plugin 'tpope/vim-rake'
   Plugin 'delimitMate.vim'
-  Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'preservim/nerdcommenter'
-  Plugin 'Chiel92/vim-autoformat'
   Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plugin 'junegunn/fzf.vim'
-  Plugin 'francoiscabrol/ranger.vim'
   Plugin 'rbgrouleff/bclose.vim'
-  Plugin 'airblade/vim-rooter'
-  Plugin 'owickstrom/vim-colors-paramount'
   Plugin 'morhetz/gruvbox'
-  Plugin 'lifepillar/vim-solarized8'
   Plugin 'tpope/vim-endwise'
   Plugin 'tpope/vim-ragtag'
   Plugin 'chemzqm/vim-jsx-improve'
