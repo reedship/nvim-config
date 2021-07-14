@@ -3,17 +3,19 @@ let g:AutoPairsUseInsertedCount = 1
 "highlight MatchParen ctermfg=green ctermbg=white cterm=NONE
 "highlight Visual  guifg=#000000 guibg=#FFFFFF gui=none
 set background=dark
-colorscheme gruvbox
+colorscheme material
+let g:material_style = 'deep ocean'
 set termguicolors
 syntax on
 set t_Co=256
 "highlight LineNr ctermfg=darkgrey
 set number
 
-"Firewatch theme
-"let g:two_firewatch_italics=1
-"colo two-firewatch
-"let g:airline_theme='twofirewatch' " if you have Airline installed and want the associated theme
+" Lightline setup
+let g:lightline = {
+      \ 'colorscheme': 'wombat'
+      \ }
+
 
 "Tabs
 set expandtab
@@ -57,25 +59,11 @@ set shortmess+=F
 " JS / React
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-let g:closetag_filenames = '*.js,*.ts,*.html,*.xhtml,*.phtml'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
-let g:closetag_filetypes = 'js,ts,html,xhtml,phtml'
+let g:closetag_filetypes = 'html,xhtml,phtml'
 let g:closetag_xhtml_filetypes = 'xhtml,jsx'
 let g:closetag_emptyTags_caseSensitive = 1
-let g:closetag_regions = {
-    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
-    \ 'javascript.jsx': 'jsxRegion',
-    \ }
-let g:closetag_shortcut = '>'
-let g:closetag_close_shortcut = '<leader>>'
-
-" Airline
-"let g:airline_theme='one'
-let g:one_allow_italics = 1
-set ttimeoutlen=10
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#bufferline#enabled = 1
 
 " NEOVIM RUBY HOST
 let g:ruby_host_prog = '/Users/braden/.gem/gems/neovim-0.8.1/exe/neovim-ruby-host'

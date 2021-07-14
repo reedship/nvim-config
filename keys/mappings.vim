@@ -3,12 +3,6 @@ nnoremap <Leader>g :Ag<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <Leader>vs :source ~/.config/nvim/init.vim<CR>
 
-" Window split keymappings
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " Tab keymappings
 " Better tab experience - from https://webdevetc.com/
 map <leader>tn :tabnew<cr>

@@ -1,5 +1,6 @@
 " TextEdit might fail if hidden is not set.
 set hidden
+let g:coc_global_extensions = ['coc-solargraph']
 
 " Some servers have issues with backup files, see #649.
 set nobackup
