@@ -3,8 +3,8 @@ let g:AutoPairsUseInsertedCount = 1
 "highlight MatchParen ctermfg=green ctermbg=white cterm=NONE
 "highlight Visual  guifg=#000000 guibg=#FFFFFF gui=none
 set background=dark
-colorscheme material
-let g:material_style = 'deep ocean'
+colorscheme base16-atelier-cave
+"let g:material_style = 'deep ocean'
 set termguicolors
 syntax on
 set t_Co=256
@@ -13,7 +13,7 @@ set number
 
 " Lightline setup
 let g:lightline = {
-      \ 'colorscheme': 'wombat'
+      \ 'colorscheme': 'base16'
       \ }
 
 

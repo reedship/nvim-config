@@ -4,11 +4,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }} " markdown preview
 
   " Theming
+  Plug 'chriskempson/base16-vim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'romgrk/barbar.nvim'
   Plug 'itchyny/lightline.vim'
   Plug 'marko-cerovac/material.nvim'
   Plug 'ayu-theme/ayu-vim'
+  Plug 'daviesjamie/vim-base16-lightline'
 
   " Languages
   Plug 'rust-lang/rust.vim'
