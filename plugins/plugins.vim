@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'MaxMEllon/vim-jsx-pretty'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
   " Utility
   Plug 'alvan/vim-closetag'
@@ -37,7 +38,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
-  " Completion / Language Server
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  call plug#end()
-
+  " LSP
+  Plug 'neovim/nvim-lspconfig'
+call plug#end()

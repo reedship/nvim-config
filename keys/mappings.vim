@@ -10,8 +10,8 @@ map <leader>tm :tabmove
 map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 " Tab in normal mode will switch between buffers
-nnoremap <TAB> :bnext<CR>
-nnoremap <S-TAB> :bprevious<CR>
+nnoremap <TAB> :bp<CR>
+nnoremap <S-TAB> :bn<CR>
 
 " Better tabbing
 vnoremap < <gv

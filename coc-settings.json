@@ -1,6 +1,0 @@
-{
-  "diagnostic.virtualText": true,
-  "diagnostic.virtualTextCurrentLineOnly": false,
-  "diagnostic.refreshOnInsertMode": true,
-  "solargraph.useBundler": true,
-}
