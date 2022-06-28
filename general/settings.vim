@@ -1,10 +1,9 @@
 " Theme and Colors
 let g:AutoPairsUseInsertedCount = 1
-"highlight MatchParen ctermfg=green ctermbg=white cterm=NONE
+" highlight MatchParen ctermfg=blue ctermbg=black cterm=NONE
 "highlight Visual  guifg=#000000 guibg=#FFFFFF gui=none
-set background=dark
-colorscheme base16-atelier-cave
-"let g:material_style = 'deep ocean'
+set background=light
+colorscheme solarized
 set termguicolors
 syntax on
 set t_Co=256
@@ -13,7 +12,7 @@ set number
 
 " Lightline setup
 let g:lightline = {
-      \ 'colorscheme': 'base16'
+      \ 'colorscheme': 'solarized-light'
       \ }
 
 
@@ -54,7 +53,23 @@ set path+=**
 set autoread
 set noshowmode
 set noshowcmd
+set noshowmatch
 set shortmess+=F
+set foldcolumn=0
+let g:lsp_diagnostics_signs_enabled = 0
+let g:lsp_diagnostics_virtual_text_insert_mode_enabled = 1
+" cursor inverting
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
+
+" match paren customization
+set updatetime=500
+autocmd CursorMoved,CursorMovedI * hi clear MatchParen
+autocmd CursorHold,CursorHoldI  * hi MatchParen ctermbg=blue guibg=lightblue
 
 " JS / React
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
@@ -67,3 +82,26 @@ let g:closetag_emptyTags_caseSensitive = 1
 
 " NEOVIM RUBY HOST
 let g:ruby_host_prog = '/Users/braden/.gem/gems/neovim-0.8.1/exe/neovim-ruby-host'
+" yank from windows
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
+" change this path according to your mount point
+if executable(s:clip)
+  augroup WSLYank
+    autocmd!
+    autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+  augroup END
+endif
+let g:clipboard = {
+      \   'name': 'win32yank-wsl',
+      \   'copy': {
+        \      '+': 'win32yank.exe -i --crlf',
+        \      '*': 'win32yank.exe -i --crlf',
+        \    },
+        \   'paste': {
+          \      '+': 'win32yank.exe -o --lf',
+          \      '*': 'win32yank.exe -o --lf',
+          \   },
+          \   'cache_enabled': 0,
+          \ }
+

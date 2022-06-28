@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }} " markdown preview
 
   " Theming
+  Plug 'shaunsingh/solarized.nvim'
+  Plug 'andersevenrud/nordic.nvim'
   Plug 'chriskempson/base16-vim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'romgrk/barbar.nvim'
@@ -33,6 +35,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-ragtag'
   Plug 'Asheq/close-buffers.vim'
+  Plug 'Raimondi/delimitMate'
 
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -40,4 +43,6 @@ call plug#begin('~/.vim/plugged')
 
   " LSP
   Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
