@@ -2,8 +2,8 @@
 let g:AutoPairsUseInsertedCount = 1
 " highlight MatchParen ctermfg=blue ctermbg=black cterm=NONE
 "highlight Visual  guifg=#000000 guibg=#FFFFFF gui=none
-set background=light
-colorscheme solarized
+" set background=light
+colorscheme nordic
 set termguicolors
 syntax on
 set t_Co=256
@@ -12,7 +12,7 @@ set number
 
 " Lightline setup
 let g:lightline = {
-      \ 'colorscheme': 'solarized-light'
+      \ 'colorscheme': 'nord'
       \ }
 
 
@@ -59,12 +59,12 @@ set foldcolumn=0
 let g:lsp_diagnostics_signs_enabled = 0
 let g:lsp_diagnostics_virtual_text_insert_mode_enabled = 1
 " cursor inverting
-highlight Cursor guifg=white guibg=black
-highlight iCursor guifg=white guibg=steelblue
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-set guicursor+=n-v-c:blinkon0
-set guicursor+=i:blinkwait10
+" highlight Cursor guifg=white guibg=blue
+" highlight iCursor guifg=white guibg=steelblue
+" set guicursor=n-v-c:block-Cursor
+" set guicursor+=i:ver100-iCursor
+" set guicursor+=n-v-c:blinkon0
+" set guicursor+=i:blinkwait10
 
 " match paren customization
 set updatetime=500
