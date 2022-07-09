@@ -10,12 +10,16 @@ set t_Co=256
 "highlight LineNr ctermfg=darkgrey
 set number
 
+" Lazygit
+nnoremap <silent> <leader>gg :LazyGit<CR>
 " Lightline setup
 let g:lightline = {
       \ 'colorscheme': 'nord'
       \ }
 
-
+let g:wiki_root='~/wiki'
+let g:wiki_filetypes = ['md']
+let g:wiki_link_extension = '.md'
 "Tabs
 set expandtab
 set tabstop=2

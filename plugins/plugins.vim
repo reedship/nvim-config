@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
   " Writing
   Plug 'junegunn/goyo.vim'   " distraction free editing
+  Plug 'lervag/wiki.vim'
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }} " markdown preview
 
   " Theming
@@ -36,6 +37,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-ragtag'
   Plug 'Asheq/close-buffers.vim'
   Plug 'Raimondi/delimitMate'
+  Plug 'kdheepak/lazygit.nvim'
 
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
