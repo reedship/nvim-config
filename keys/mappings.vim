@@ -42,3 +42,6 @@ nnoremap Y y$
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
+
+" go to most recently pasted region
+nnoremap <expr> gp '`[' . getregtype()[0] . '`]'
